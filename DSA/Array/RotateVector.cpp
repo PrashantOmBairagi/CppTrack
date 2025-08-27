@@ -5,7 +5,7 @@ using namespace std;
 //BEST CODE TILL DATE, MUST GIVE A TRY!!
 //THIS CODE ROTATES THE ARRAY BY 'K' TIMES!!!!
 
-int display(vector<int>&v){
+void display(vector<int>&v){
     for(int i=0;i<=v.size()-1;i++)
      cout<<v[i]<<" ";
 cout<<endl;
