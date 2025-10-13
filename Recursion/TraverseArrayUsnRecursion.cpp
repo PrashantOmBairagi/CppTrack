@@ -3,9 +3,8 @@
 using namespace std;
 void printarr(vector<int> &arr,int n){
      if(n==0) return;
-      cout<<arr[n-1]<<" ";
      printarr(arr,n-1);
-    
+     cout<<arr[n-1]<<" ";
 }
 int main(){
     vector<int>arr={2,5,3,9,1,0,5,6,5};
