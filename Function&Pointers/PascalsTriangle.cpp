@@ -12,7 +12,7 @@ int comb(int n, int r){
 }
 int main(){
     int n;
-    cout<<"Give number of lines you want to print :";
+    cout<<"My Lord! Provide with no. of lines you want:";
     cin>>n;
 
     for(int i=0;i<=n-1;i++){
