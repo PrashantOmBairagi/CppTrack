@@ -1,1 +1,2 @@
-PwrOpt(x,n/2) * PwrOpt(x,n/2)
+
+}
