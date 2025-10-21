@@ -29,7 +29,7 @@ void subsets2(vector<int>&arr, int n, vector<int>ans, vector<vector<int>>&finala
 }
 
 int main(){
-    vector<int>arr ={2,2};
+    vector<int>arr ={1,3,3,9};
     //print(arr);
     vector<vector<int>>finalanswer;
     vector<int>ans;
