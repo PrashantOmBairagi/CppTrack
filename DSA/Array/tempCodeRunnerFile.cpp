@@ -1,1 +1,0 @@
-cout<<sizeof(marks[0])<<endl;
