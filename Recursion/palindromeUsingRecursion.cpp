@@ -8,7 +8,7 @@ bool isPalindrome(string &str,int i,int j){
 }
 int main(){
 
-    string str ="";
+    string str ="mom";
     int i = 0;
     int j = str.size()-1;
 
