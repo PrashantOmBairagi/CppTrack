@@ -1,5 +1,5 @@
- #include <iostream>
- #include<vector>
+#include <iostream>
+#include<vector>
 using namespace std;
 bool validMountainArray(vector<int>& arr) {
         int n = arr.size();
@@ -35,5 +35,5 @@ int main(){
     //     }
     //     cout<<peakIdx;
         // Call function to check mountain arrray:
-        cout<<(validMountainArray?"Yes Its mountaina array":"no its not a mountain array");
+        cout<<(validMountainArray?"Yes Its mountain array":"no its not a mountain array");
 }
