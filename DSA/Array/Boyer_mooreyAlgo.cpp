@@ -6,10 +6,10 @@ int majorityElement(vector<int>& nums) {
     int target=0;
     for(int num : nums){
         //cout<<nums<<' ';
-        if(target==0){
+        if(count==0){
             target=num;
         }
-        if(target=num){
+        if(num==target){
             count++;
         }
         else count--;
