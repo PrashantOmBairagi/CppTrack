@@ -8,7 +8,7 @@ void binarystring(string s){
         return;
     }
     binarystring(s+'0');
-    binarystring(s+'1');
+    if(s.empty() || s.back()!='1')binarystring(s+'1');
 }
 int main(){
     binarystring("");
