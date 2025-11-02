@@ -1,7 +1,7 @@
 #include<iostream>
 #include<string>
 using namespace std;
-int n=3;
+int n=4;
 void binarystring(string s){
     if(s.size()==n){
         cout<<s<<endl;
