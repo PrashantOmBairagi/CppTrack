@@ -5,25 +5,18 @@ int fact(int n){
     if(n==1 || n==0) return 1; 
     return n*fact(n-1);
 }
-string generator(string s, string &ans,int n, int k,int idx){
-    if(n==0 || k==0) return ans;
+string generator(string s, string &ans,int n, int k){
+    if(n==0) return ans;
+    int idx = 0;
     if(k%fact(s.size()-1)==0){
-        idx =( k/fact(s.size()-1))-1;
+         idx =( k/fact(n-1))-1;
     }
     if(k%fact(s.size()-1)!=0){
-        idx =( k/fact(s.size()-1));
+         idx =( k/fact(n-1));
     }
     ans+=s[idx];
-    string z = "";
-    for(int i=0;i<n;i++){
-        if(i==idx){
-        }
-        else{
-            z+=s[i];
-        }
-    }
-    generator(z,ans,n-1,fact(s.size()-1),0);
-    //cout<<z;
+    s.erase(s.begin()+idx);
+    generator(s,ans,n-1,k-idx*fact(n-1));
     return ans;
 
 }
@@ -33,12 +26,12 @@ string getPermutation(int n, int k) {
         s+=to_string(i);
     }
     string ans = "";
-    generator(s,ans,n,k,0);
+    generator(s,ans,n,k);
     return ans;
 
 }
 int main(){
-    int n = 4;
-    int k = 12;
+    int n = 3;
+    int k = 3;
     cout<<getPermutation(n,k);  
 }
