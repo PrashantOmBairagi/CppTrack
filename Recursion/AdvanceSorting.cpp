@@ -48,12 +48,12 @@ int main(){
     // int n2 = sizeof(arr2)/sizeof(arr2[0]);
     // vector<int>a(arr1,arr1+n1);
     // vector<int>b(arr2,arr2+n2);
+
     int arr[]={5,1,3,0,4,9,6};
     int n = sizeof(arr) / sizeof(arr[0]);
     vector<int>test(arr,arr+n);
-    vector<int> ans;
-
     cout<<"Original array : ";
+
     //merge(a,b,ans);
     for(int ele : test){
         cout<<ele<<" ";
