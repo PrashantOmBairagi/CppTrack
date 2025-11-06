@@ -9,10 +9,10 @@ string generator(string s, string &ans,int n, int k){
     if(n==0) return ans;
     int idx = 0;
     if(k%fact(s.size()-1)==0){
-         idx =( k/fact(n-1))-1;
+        idx =( k/fact(n-1))-1;
     }
     if(k%fact(s.size()-1)!=0){
-         idx =( k/fact(n-1));
+        idx =( k/fact(n-1));
     }
     ans+=s[idx];
     s.erase(s.begin()+idx);
