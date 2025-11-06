@@ -38,7 +38,10 @@ void mergeSort(vector<int>&test){
     mergeSort(b);
 
     merge(a,b,test);
-
+    //To improve space complexity which was O(nlogn)
+    // to O(n) by deleting arrays (created) after use.
+    a.clear();
+    b.clear();
     return;
 }
 int main(){
