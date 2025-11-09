@@ -28,7 +28,7 @@ int main(){
     vector<int>nums;
     nums={5,3,1,1};
     int k = 4, multiplier=3;
-    getFinalState(nums,k,multiplier);
+    //getFinalState(nums,k,multiplier);
     get(nums,k,multiplier);
     for(int ele : nums){
         cout<<ele<<" ";
