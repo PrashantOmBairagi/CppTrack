@@ -14,12 +14,7 @@ int partition(vector<int>&arr,int sidx,int eidx){
     }
     
     swap(arr[sidx],arr[count+sidx]);
-    return count+sidx;
-}
-void quickSort(vector<int>&arr,int sidx,int eidx){
-    if(sidx>=eidx) return;
-    
-    int pivot = partition(arr,sidx,eidx);   
+    int pivot = count+sidx; 
     int p=sidx,q=eidx;
     while(p<q){
         if(arr[p]>arr[pivot] && arr[q]<arr[pivot]){
@@ -27,10 +22,15 @@ void quickSort(vector<int>&arr,int sidx,int eidx){
         }
         else if(arr[p]<arr[pivot]){
             p++;
-        } else if(arr[q]>arr[pivot]){
+        } else if(arr[q]>=arr[pivot]){
             q--;
         }
     }
+    return pivot;
+}
+void quickSort(vector<int>&arr,int sidx,int eidx){
+    if(sidx>=eidx) return;
+    int pivot = partition(arr,sidx,eidx);
     quickSort(arr,sidx,pivot-1);
     quickSort(arr,pivot+1,eidx);
     return;
@@ -38,7 +38,7 @@ void quickSort(vector<int>&arr,int sidx,int eidx){
     
 }
 int main(){
-    vector<int>arr={1,5,8,2,7,6,3,4};
+    vector<int>arr={1,5,8,2,7,6,2,4};
     for(int ele : arr){
         cout<<ele<<" ";
     }

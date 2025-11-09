@@ -7,7 +7,8 @@ using namespace std;
 int partition(vector<int>&arr,int sidx,int eidx){
     int count = 0;
     for(int i=sidx;i<=eidx;i++){
-        if(arr[(sidx+eidx)/2]>arr[i]){
+        //if(arr[(sidx+eidx)/2]==arr[i]) continue;
+        if(arr[(sidx+eidx)/2]>=arr[i]){
             count++;
         }
     }
@@ -37,7 +38,7 @@ void quickSort(vector<int>&arr,int sidx,int eidx){
     
 }
 int main(){
-    vector<int>arr={1,5,8,2,7,6,3,4};
+    vector<int>arr={1,2,8,2,7,6,3,4};
     for(int ele : arr){
         cout<<ele<<" ";
     }
