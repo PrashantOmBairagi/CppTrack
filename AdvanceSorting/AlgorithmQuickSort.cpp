@@ -38,7 +38,7 @@ void quickSort(vector<int>&arr,int sidx,int eidx){
     
 }
 int main(){
-    vector<int>arr={1,5,8,2,7,6,2,4};
+    vector<int>arr={1,2,8,2,7,6,3,4};
     for(int ele : arr){
         cout<<ele<<" ";
     }

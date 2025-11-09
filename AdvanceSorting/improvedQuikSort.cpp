@@ -7,32 +7,34 @@ using namespace std;
 int partition(vector<int>&arr,int sidx,int eidx){
     int count = 0;
     for(int i=sidx;i<=eidx;i++){
-        //if(arr[(sidx+eidx)/2]==arr[i]) continue;
-        if(arr[(sidx+eidx)/2]>=arr[i]){
+        if(arr[(sidx+eidx)/2]>arr[i]){
             count++;
         }
     }
     
     swap(arr[(sidx+eidx)/2],arr[count+sidx]);
-    return count+sidx;
-}
-void quickSort(vector<int>&arr,int sidx,int eidx){
-    if(sidx>=eidx) return;
-    
-    int pivot = partition(arr,sidx,eidx);   
     int p=sidx,q=eidx;
+    int pivot = count+sidx;
+
     while(p<q){
         if(arr[p]>arr[pivot] && arr[q]<arr[pivot]){
             swap(arr[p++],arr[q--]);
         }
         else if(arr[p]<arr[pivot]){
             p++;
-        } else if(arr[q]>arr[pivot]){
+        } else if(arr[q]>=arr[pivot]){
             q--;
         }
     }
+    return pivot;
+}
+void quickSort(vector<int>&arr,int sidx,int eidx){
+    if(sidx>=eidx) return;
+    int pivot = partition(arr,sidx,eidx);  
+
     quickSort(arr,sidx,pivot-1);
     quickSort(arr,pivot+1,eidx);
+
     return;
     
     
