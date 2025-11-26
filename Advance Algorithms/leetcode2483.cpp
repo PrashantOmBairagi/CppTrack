@@ -2,6 +2,7 @@
 #include<vector>
 #include<string>
 using namespace std;
+// DATED: 24-11-2025 : Jabalpur : Leetcode 2483
 int bestClosingTime(string customers){
     vector<int>pre(customers.size()+1);
     int hour = 0;
