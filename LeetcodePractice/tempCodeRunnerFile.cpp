@@ -1,0 +1,1 @@
+ int(columnTitle[i])-64
